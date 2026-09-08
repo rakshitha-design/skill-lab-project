@@ -45,3 +45,7 @@ The main goal of building an Attendance Management System is to automate and sim
 DESIGN :
 <img width="556" height="191" alt="image" src="https://github.com/user-attachments/assets/1301e48e-8572-4f18-8735-b28dc93e381d" />
 
+
+PROTOTYPE:
+<img width="557" height="189" alt="image" src="https://github.com/user-attachments/assets/b6d95ba6-f924-4e44-9b8f-9951a068aa8a" />
+
