@@ -41,3 +41,7 @@ Maintenance: Backup and regular system update
 MAIN GOAL:
 The main goal of building an Attendance Management System is to automate and simplify the process of recording, monitoring, and managing attendance, while reducing manual work, errors, and paperwork.
 
+
+DESIGN :
+<img width="556" height="191" alt="image" src="https://github.com/user-attachments/assets/1301e48e-8572-4f18-8735-b28dc93e381d" />
+
