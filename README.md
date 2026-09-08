@@ -49,3 +49,7 @@ DESIGN :
 PROTOTYPE:
 <img width="557" height="189" alt="image" src="https://github.com/user-attachments/assets/b6d95ba6-f924-4e44-9b8f-9951a068aa8a" />
 
+
+AI VERSION:
+<img width="958" height="539" alt="image" src="https://github.com/user-attachments/assets/d5cc1f0d-34b2-407e-9894-24e6e3f82006" />
+
