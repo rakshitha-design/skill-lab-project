@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management System</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- ================= LOGIN PAGE ================= -->
+    <section class="login-page" id="loginPage">
+
+        <div class="login-box">
+
+            <h1>ATTENDANCE<br>MANAGEMENT<br>SYSTEM</h1>
+
+            <h2>LOGIN</h2>
+
+            <form id="loginForm">
+
+                <label>USERNAME</label>
+                <input type="text" id="username" placeholder="Enter username" required>
+
+                <label>PASSWORD</label>
+                <input type="password" id="password" placeholder="Enter password" required>
+
+                <button type="submit" class="login-btn">LOGIN</button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DASHBOARD ================= -->
+    <section class="dashboard" id="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2>ATTENDANCE<br>MANAGEMENT</h2>
+
+            <div class="profile">
+                <div class="profile-icon">👤</div>
+                <p>Admin</p>
+            </div>
+
+            <nav>
+                <button onclick="showPage('dashboardHome')">🏠 Dashboard</button>
+                <button onclick="showPage('students')">👥 Students</button>
+                <button onclick="showPage('teachers')">👨‍🏫 Teachers</button>
+                <button onclick="showPage('today')">📊 Today's Attendance</button>
+                <button onclick="showPage('mark')">📝 Mark Attendance</button>
+                <button onclick="showPage('records')">📋 View Records</button>
+                <button onclick="showPage('reports')">📈 Reports</button>
+                <button onclick="logout()">🚪 Logout</button>
+            </nav>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- ================= DASHBOARD HOME ================= -->
+            <div class="page active" id="dashboardHome">
+
+                <div class="top-bar">
+                    <h1>Dashboard</h1>
+                    <span>Welcome to Attendance Management System</span>
+                </div>
+
+                <div class="cards">
+
+                    <div class="card">
+                        <div class="card-icon">👥</div>
+                        <h3>Total Students</h3>
+                        <p>50</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">👨‍🏫</div>
+                        <h3>Total Teachers</h3>
+                        <p>10</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">✅</div>
+                        <h3>Present Today</h3>
+                        <p>42</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">❌</div>
+                        <h3>Absent Today</h3>
+                        <p>8</p>
+                    </div>
+
+                </div>
+
+                <div class="welcome-box">
+                    <h2>Attendance Overview</h2>
+                    <p>Monitor student attendance, manage records and generate reports from one place.</p>
+
+                    <div class="progress">
+                        <div class="progress-bar">84%</div>
+                    </div>
+
+                    <p><b>Overall Attendance: 84%</b></p>
+                </div>
+
+            </div>
+
+
+            <!-- ================= STUDENTS ================= -->
+            <div class="page" id="students">
+
+                <h1>Students</h1>
+
+                <div class="search-box">
+                    <input type="text" placeholder="🔍 Search Student...">
+                </div>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Class</th>
+                                <th>Attendance</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td>Rahul</td>
+                                <td>CSE - 3</td>
+                                <td>92%</td>
+                            </tr>
+
+                            <tr>
+                                <td>02</td>
+                                <td>Priya</td>
+                                <td>CSE - 3</td>
+                                <td>96%</td>
+                            </tr>
+
+                            <tr>
+                                <td>03</td>
+                                <td>Arun</td>
+                                <td>CSE - 3</td>
+                                <td>80%</td>
+                            </tr>
+
+                            <tr>
+                                <td>04</td>
+                                <td>Sneha</td>
+                                <td>CSE - 3</td>
+                                <td>88%</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= TEACHERS ================= -->
+            <div class="page" id="teachers">
+
+                <h1>Teachers</h1>
+
+                <div class="search-box">
+                    <input type="text" placeholder="🔍 Search Teacher...">
+                </div>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Department</th>
+                                <th>Classes</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>T01</td>
+                                <td>Mr. Kumar</td>
+                                <td>CSE</td>
+                                <td>3</td>
+                            </tr>
+
+                            <tr>
+                                <td>T02</td>
+                                <td>Ms. Priya</td>
+                                <td>ECE</td>
+                                <td>2</td>
+                            </tr>
+
+                            <tr>
+                                <td>T03</td>
+                                <td>Mr. Arun</td>
+                                <td>ME</td>
+                                <td>2</td>
+                            </tr>
+
+                            <tr>
+                                <td>T04</td>
+                                <td>Ms. Sneha</td>
+                                <td>CSE</td>
+                                <td>3</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= TODAY'S ATTENDANCE ================= -->
+            <div class="page" id="today">
+
+                <h1>Today's Attendance</h1>
+
+                <div class="date-box">
+                    <label>Select Date</label>
+                    <input type="date" value="2026-09-08">
+                </div>
+
+                <div class="cards small-cards">
+
+                    <div class="card present">
+                        <h3>Present</h3>
+                        <p>42</p>
+                    </div>
+
+                    <div class="card absent">
+                        <h3>Absent</h3>
+                        <p>8</p>
+                    </div>
+
+                    <div class="card late">
+                        <h3>Late</h3>
+                        <p>2</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Total</h3>
+                        <p>50</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= MARK ATTENDANCE ================= -->
+            <div class="page" id="mark">
+
+                <h1>Mark Attendance</h1>
+
+                <div class="form-row">
+
+                    <select>
+                        <option>Select Class</option>
+                        <option>CSE - 3</option>
+                        <option>ECE - 3</option>
+                        <option>ME - 2</option>
+                    </select>
+
+                    <input type="date" value="2026-09-08">
+
+                </div>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Roll No</th>
+                                <th>Name</th>
+                                <th>Attendance</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>01</td>
+                                <td>Rahul</td>
+                                <td>
+                                    <label>
+                                        <input type="radio" name="r1" checked>
+                                        Present
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="r1">
+                                        Absent
+                                    </label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>02</td>
+                                <td>Priya</td>
+                                <td>
+                                    <label>
+                                        <input type="radio" name="r2" checked>
+                                        Present
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="r2">
+                                        Absent
+                                    </label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>03</td>
+                                <td>Arun</td>
+                                <td>
+                                    <label>
+                                        <input type="radio" name="r3">
+                                        Present
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="r3" checked>
+                                        Absent
+                                    </label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>04</td>
+                                <td>Sneha</td>
+                                <td>
+                                    <label>
+                                        <input type="radio" name="r4" checked>
+                                        Present
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="r4">
+                                        Absent
+                                    </label>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <button class="save-btn" onclick="saveAttendance()">
+                    💾 SAVE ATTENDANCE
+                </button>
+
+            </div>
+
+
+            <!-- ================= VIEW RECORDS ================= -->
+            <div class="page" id="records">
+
+                <h1>View Attendance Records</h1>
+
+                <div class="filter-box">
+
+                    <select>
+                        <option>Class: CSE - 3</option>
+                        <option>Class: ECE - 3</option>
+                    </select>
+
+                    <select>
+                        <option>Subject: All Subjects</option>
+                        <option>Computer Science</option>
+                        <option>Database</option>
+                    </select>
+
+                    <input type="date">
+                    <input type="date">
+
+                </div>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Roll No</th>
+                                <th>Name</th>
+                                <th>Present</th>
+                                <th>Absent</th>
+                                <th>Late</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>01</td>
+                                <td>Rahul</td>
+                                <td>7</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>8</td>
+                            </tr>
+
+                            <tr>
+                                <td>02</td>
+                                <td>Priya</td>
+                                <td>7</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>8</td>
+                            </tr>
+
+                            <tr>
+                                <td>03</td>
+                                <td>Arun</td>
+                                <td>5</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>8</td>
+                            </tr>
+
+                            <tr>
+                                <td>04</td>
+                                <td>Sneha</td>
+                                <td>7</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>8</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= REPORTS ================= -->
+            <div class="page" id="reports">
+
+                <h1>Attendance Reports</h1>
+
+                <div class="report-card">
+
+                    <h2>Attendance Percentage</h2>
+
+                    <div class="report-item">
+                        <span>Rahul</span>
+                        <strong>87.5%</strong>
+                    </div>
+
+                    <div class="report-item">
+                        <span>Priya</span>
+                        <strong>87.5%</strong>
+                    </div>
+
+                    <div class="report-item">
+                        <span>Arun</span>
+                        <strong>62.5%</strong>
+                    </div>
+
+                    <div class="report-item">
+                        <span>Sneha</span>
+                        <strong>87.5%</strong>
+                    </div>
+
+                </div>
+
+                <div class="report-card">
+
+                    <h2>Overall Attendance</h2>
+
+                    <div class="large-percentage">
+                        84%
+                    </div>
+
+                    <p>Average student attendance</p>
+
+                    <button class="save-btn">
+                        📄 Generate Report
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </section>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+
+        // Login
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username !== "" && password !== "") {
+
+                document.getElementById("loginPage").style.display = "none";
+                document.getElementById("dashboard").style.display = "flex";
+
+            }
+
+        });
+
+
+        // Show pages
+        function showPage(pageId) {
+
+            const pages = document.querySelectorAll(".page");
+
+            pages.forEach(function(page) {
+                page.classList.remove("active");
+            });
+
+            document.getElementById(pageId).classList.add("active");
+
+        }
+
+
+        // Logout
+        function logout() {
+
+            document.getElementById("dashboard").style.display = "none";
+            document.getElementById("loginPage").style.display = "flex";
+
+            document.getElementById("loginForm").reset();
+
+        }
+
+
+        // Save Attendance
+        function saveAttendance() {
+
+            alert("Attendance saved successfully!");
+
+        }
+
+    </script>
+
+</body>
+</html>
