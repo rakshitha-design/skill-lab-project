@@ -53,3 +53,6 @@ PROTOTYPE:
 AI VERSION:
 <img width="958" height="539" alt="image" src="https://github.com/user-attachments/assets/d5cc1f0d-34b2-407e-9894-24e6e3f82006" />
 
+YOU CAN CHECK THE LIVE WEBSITE IN THE BELOW LINK
+ https://rakshitha-design.github.io/skill-lab-project/
+
